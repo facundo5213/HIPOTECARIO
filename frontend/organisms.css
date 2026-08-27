@@ -1,0 +1,35 @@
+/* Navegación por secciones — franja tipo índice de carpeta/legajo */
+.section-tabs{
+  display:inline-flex;
+  gap:2px;
+  margin-bottom:36px;
+  padding:4px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:var(--surface);
+}
+.section-tab{
+  padding:10px 18px;
+  border:0;
+  border-radius:6px;
+  background:transparent;
+  color:var(--muted);
+  font:inherit;
+  font-size:13px;
+  font-weight:650;
+  letter-spacing:.01em;
+  cursor:pointer;
+  transition:background-color .15s ease,color .15s ease;
+}
+.section-tab:hover{color:var(--navy)}
+.section-tab.active{background:var(--navy);color:#fff}
+
+.single-workspace{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.single-workspace .result{min-height:300px}
+.single-workspace .empty{min-height:150px}
+
+@media (max-width:820px){
+  .single-workspace{grid-template-columns:1fr}
+  .section-tabs{display:flex}
+  .section-tab{flex:1}
+}
